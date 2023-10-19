@@ -21,9 +21,9 @@ class Player
            @pmark = (gets.chomp).to_s.capitalize
         end
       elsif @@mark == "X"
-        @pmark = "⭕"
+        @pmark = "O"
       elsif @@mark == "O"
-        @pmark = "❌"
+        @pmark = "X"
       end
       @@mark = @pmark
       puts "#{@pname} va jouer en tant que #{@pmark} !"

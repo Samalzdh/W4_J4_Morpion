@@ -30,10 +30,10 @@ class Game
       i +=1
       if @@victory
           # Win du player 1, break de la loop si besoin et affiche la board finie
-        puts "\nIl y a un gagnant :"
+        puts "\nGAME ! "
         @board_game.show
-        puts "\nGood game #{@p_one.pname} !"
-        puts "#{@p_two.pname}, T'es nul!"
+        puts "\nT'as dead ca #{@p_one.pname} !"
+        puts "#{@p_two.pname}, U LOSE B!TCH!"
         break
       end
       break if i > 8
@@ -41,20 +41,20 @@ class Game
       i +=1
       if @@victory
           # Win du player 2, break de la loop si besoin et affiche la board finie
-        puts "\nIl y a un gagnant :"
+        puts "\nGAME ! "
         @board_game.show
-        puts "\nGood game #{@p_two.pname} !"
-        puts "#{@p_one.pname}, T'es nul! "
+        puts "\nT'as dead ca #{@p_two.pname} !"
+        puts "#{@p_one.pname}, U LOSE B!TCH!! "
         break
       end
     end
     @board_game.show
     # Affiche la board lorsque le jeu est fini, et la board remplie entièrement
-    puts "Egalité! Vous êtes aussi nul l'un que l'autre." if @@victory == false
+    puts "Egalité! c'etait bien nul tout ca." if @@victory == false
     # Si aucune victoire, affiche message d'égalité
     puts "#{@p_one.pname} : #{@p_one.ppoints} VS #{@p_two.pname} : #{@p_two.ppoints}"
     # Affiche l'état des points dans tous les cas à la fin
-    puts "Try again ? Y/N"
+    puts "REVANCHE? BELLE ? Y/N"
     # Propose un nouveau jeu en gardant en mémoire les points
     choice = (gets.chomp).to_s.capitalize
     if choice == "Y"
